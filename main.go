@@ -4,44 +4,34 @@ import (
 	"flag"
 	"log"
 	"os"
+	"reflect"
 
-	"github.com/rayyildiz/es-wrk/job"
-	"github.com/subosito/gotenv"
+	"github.com/rayyildiz/es-wrk/worker"
 )
 
-func init() {
-	gotenv.Load()
-}
-
 func main() {
-	cfg := loadConfig()
-
 	flags := flag.NewFlagSet("es-wrk", flag.ExitOnError)
-	noOfPost := flags.Int("n", 500, "Number of posts")
-	noOfWorker := flags.Int("t", 8, "Number of thread")
+	noOfPost := flags.Int("n", 20000, "Number of documents")
+	esUrl := flag.String("url", "http://localhost:9200", "Elasticsearch URL")
+	esUsername := flag.String("username", "", "Elasticsearch username")
+	esPassword := flag.String("password", "", "Elasticsearch Password")
 	flags.Parse(os.Args[1:])
 
-	wrk, err := job.NewWorker(cfg.url, cfg.username, cfg.password)
+	wrk, err := worker.NewWorker(*esUrl, *esUsername, *esPassword, reflect.TypeOf(Article{}))
 	if err != nil {
 		log.Printf("[ERROR] could not created worker, %v", err)
 		os.Exit(1)
 	}
 
-	wrk.DoJob(*noOfPost, *noOfWorker)
+	wrk.Start(*noOfPost)
 }
 
-type config struct {
-	url      string
-	username string
-	password string
-}
-
-func loadConfig() *config {
-	cfg := config{}
-
-	cfg.url = os.Getenv("ELASTICSEARCH_URL")
-	cfg.username = os.Getenv("ELASTICSEARCH_USERNAME")
-	cfg.password = os.Getenv("ELASTICSEARCH_PASSWORD")
-
-	return &cfg
+// Article is a test object.
+type Article struct {
+	ID            string `json:"id"`
+	Text          string `json:"text"`
+	Language      string `json:"language"`
+	PostDate      string `json:"postDate"`
+	CurrentStatus int    `json:"currentStatus"`
+	IsPublished   bool   `json:"isPublished"`
 }

@@ -1,0 +1,12 @@
+language: go
+go:
+- 1.7.x
+- 1.8.x
+- 1.9.x
+- master
+script:
+- go get github.com/olivere/elastic
+- go test ./...
+- go build
+notifications:
+  email: false

@@ -1,0 +1,14 @@
+elastic:
+    image: elasticsearch
+    volumes:
+        - ./data:/usr/share/elasticsearch/data
+
+haproxy:
+    image: haproxy
+    volumes:
+        - ./:/usr/local/etc/haproxy
+    links:
+        - elastic
+    ports:
+        - "9200:9200"
+        #- "9300:9300"

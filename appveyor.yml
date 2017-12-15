@@ -1,0 +1,27 @@
+version: "{build}"
+
+# Source Config
+clone_folder: c:\gopath\src\github.com\rayyildiz\es-wrk
+
+environment:
+    GOPATH: c:\gopath
+    GOVERSION: 1.9.2
+
+init:
+    - git config --global core.autocrlf input
+
+install:
+    - choco install golang --version %GOVERSION% -y
+    - choco install bzr -y
+    - choco install mingw -y
+    - set Path=c:\go\bin;c:\gopath\bin;C:\tools\mingw64\bin;C:\Program Files (x86)\Bazaar\;C:\Program Files\Mercurial\%Path%
+    - go version
+    - go env
+    - go get github.com/olivere/elastic
+
+build: false
+deploy: false
+
+test_script:
+    - go test github.com/rayyildiz/es-wrk
+    - go build github.com/rayyildiz/es-wrk

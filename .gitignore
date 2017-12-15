@@ -3,3 +3,15 @@
 *.so
 *.lib
 debug.test
+debug
+data/nodes/
+job/debug.test
+*.iml
+.idea/
+.vscode/
+tmp/
+*.prof
+*.pprof
+*.trace
+debug
+.vscode/
