@@ -5,6 +5,7 @@ es-wrk
 [![Build Status](http://img.shields.io/travis/rayyildiz/es-wrk.svg?style=flat-square)](https://travis-ci.org/rayyildiz/es-wrk)
 [![Build status](https://ci.appveyor.com/api/projects/status/ak03giji8xyeqco4?svg=true)](https://ci.appveyor.com/project/rayyildiz/es-wrk)
 [![Go Report Card](https://goreportcard.com/badge/github.com/rayyildiz/es-wrk)](https://goreportcard.com/report/github.com/rayyildiz/es-wrk)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frayyildiz%2Fes-wrk.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frayyildiz%2Fes-wrk?ref=badge_shield)
 
 ES-WRK is a dummy data generator for [elastic search](https://github.com/elastic/elasticsearch). 
 
@@ -53,3 +54,6 @@ TODO
 
 - [ ] Nested object
 - [ ] Multi worker support
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frayyildiz%2Fes-wrk.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frayyildiz%2Fes-wrk?ref=badge_large)
