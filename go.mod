@@ -1,4 +1,4 @@
-module go.rayyildiz.dev/eswrk
+module github.com/rayyildiz/eswrk
 
 go 1.14
 

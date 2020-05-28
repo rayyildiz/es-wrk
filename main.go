@@ -6,7 +6,7 @@ import (
 	"os"
 	"reflect"
 
-	"go.rayyildiz.dev/eswrk/worker"
+	"github.com/rayyildiz/eswrk/worker"
 )
 
 func main() {

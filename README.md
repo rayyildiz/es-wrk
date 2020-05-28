@@ -5,7 +5,6 @@ es-wrk
 [![Build Status](http://img.shields.io/travis/rayyildiz/es-wrk.svg?style=flat-square)](https://travis-ci.org/rayyildiz/es-wrk)
 ![Build status](https://github.com/shopmob/authorization/workflows/ci/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/rayyildiz/es-wrk)](https://goreportcard.com/report/github.com/rayyildiz/es-wrk)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frayyildiz%2Fes-wrk.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Frayyildiz%2Fes-wrk?ref=badge_shield)
 
 ES-WRK is a dummy data generator for [elastic search](https://github.com/elastic/elasticsearch). 
 
@@ -16,7 +15,7 @@ Installation
 To install this package, you need to install [Go](https://golang.org/dl/) and [setup your Go workspace](https://golang.org/doc/install) on your computer. Then install the library is to run:
 
 ```bash
-$ go get github.com/rayyildiz/es-wrk
+$ go get github.com/rayyildiz/eswrk
 ```
 
 Getting Started
@@ -54,6 +53,3 @@ TODO
 
 - [ ] Nested object
 - [ ] Multi worker support
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Frayyildiz%2Fes-wrk.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Frayyildiz%2Fes-wrk?ref=badge_large)
