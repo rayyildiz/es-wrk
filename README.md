@@ -37,7 +37,7 @@ type Book struct {
 Then start worker as below. `es-wrk` creates random data and insert into the elasticsearch. 
 
 ```go
-import "github.com/rayyildiz/es-wrk/worker"
+import "github.com/rayyildiz/eswrk/worker"
 
 wrk, err := worker.NewWorker(elasticURL, elasticUsername, elasticPassword, reflect.TypeOf(Book{}))
 if err != nil {
