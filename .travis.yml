@@ -1,11 +1,10 @@
 language: go
 go:
-- 1.7.x
-- 1.8.x
-- 1.9.x
+- 1.13.x
+- 1.14.x
 - master
 script:
-- go get github.com/olivere/elastic
+- gomod download
 - go test ./...
 - go build
 notifications:
