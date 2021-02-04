@@ -2,7 +2,6 @@ es-wrk
 ===
 
 
-[![Build Status](http://img.shields.io/travis/rayyildiz/es-wrk.svg?style=flat-square)](https://travis-ci.org/rayyildiz/es-wrk)
 ![Build status](https://github.com/shopmob/authorization/workflows/ci/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/rayyildiz/es-wrk)](https://goreportcard.com/report/github.com/rayyildiz/es-wrk)
 
